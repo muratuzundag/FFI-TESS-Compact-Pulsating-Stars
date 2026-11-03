@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Cite the exact release and the applicable eleanor, TessCut, TESS/MAST and dependency references."
+title: "FFI TESS Compact pulsating stars"
+type: software
+version: 0.1.0
+authors:
+  - family-names: "Uzundag"
+    given-names: "Murat"
+license: MIT

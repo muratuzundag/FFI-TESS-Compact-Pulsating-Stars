@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ffi-tess-compact"
+version = "0.1.0"
+description = "TESS FFI coverage, custom eleanor photometry and compact-star variability spectra"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Murat Uzundag"}]
+dependencies = ["numpy>=1.24", "scipy>=1.10", "astropy>=5", "astroquery>=0.4.7", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+extract = ["eleanor>=2.0.5"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+ffi-tess = "ffi_tess.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
